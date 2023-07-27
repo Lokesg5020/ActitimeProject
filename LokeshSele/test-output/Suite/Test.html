@@ -1,0 +1,1125 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>29/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jul 27 21:16:48 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>548 seconds (548891 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Lokesh.Actions.testscripts.UsageOfVtigerDoubleClick.postCondition()'><b>postCondition</b><br>Test class: com.Lokesh.Actions.testscripts.UsageOfVtigerDoubleClick</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [58f4c2c2ad8fefba9db08b2e362d1961, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 115.0.1901.183, ms:edgeOptions: {debuggerAddress: localhost:51342}, msedge: {msedgedriverVersion: 115.0.1901.183 (db29db5e66a..., userDataDir: C:\Users\pc\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51342/devtoo..., se:cdpVersion: 115.0.1901.183, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 58f4c2c2ad8fefba9db08b2e362d1961
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:161)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:590)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:594)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:341)
+	at vtigerPreAndPost.VtigerPreAndPostConditions.postCondition(VtigerPreAndPostConditions.java:36)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:157)
+	... 24 more
+Caused by: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:183)
+	at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:117)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$2(DriverCommandExecutor.java:148)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1812298336", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1812298336'><pre>org.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [58f4c2c2ad8fefba9db08b2e362d1961, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 115.0.1901.183, ms:edgeOptions: {debuggerAddress: localhost:51342}, msedge: {msedgedriverVersion: 115.0.1901.183 (db29db5e66a..., userDataDir: C:\Users\pc\AppData\Local\T...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51342/devtoo..., se:cdpVersion: 115.0.1901.183, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 58f4c2c2ad8fefba9db08b2e362d1961
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:161)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:590)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:594)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:446)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:341)
+	at vtigerPreAndPost.VtigerPreAndPostConditions.postCondition(VtigerPreAndPostConditions.java:36)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+	at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: java.util.concurrent.ExecutionException: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: driver.version: unknown
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:157)
+	... 24 more
+Caused by: org.openqa.selenium.TimeoutException: Process timed out after waiting for 20000 ms.
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.2&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.os.OsProcess.waitFor(OsProcess.java:183)
+	at org.openqa.selenium.os.CommandLine.waitFor(CommandLine.java:117)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$2(DriverCommandExecutor.java:148)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+</pre></div></td>
+<td>22</td>
+<td>com.Lokesh.Actions.testscripts.UsageOfVtigerDoubleClick@61322f9d</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.bharath.Assignments.testscript.UniqueValuesOfListBox.uniqueValuesTest()'><b>uniqueValuesTest</b><br>Test class: com.bharath.Assignments.testscript.UniqueValuesOfListBox<br/>
+<a href="#Output-2090165204" onClick='toggleBox("Output-2090165204", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2090165204" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2090165204">
+Test started<br/>
+Thuesday<br/>
+Wednesday<br/>
+Thursday<br/>
+Friday<br/>
+Saturday<br/>
+Sunday<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>com.bharath.Assignments.testscript.UniqueValuesOfListBox@b3ca52e</td></tr>
+<tr>
+<td title='com.latestAssignments.testscrripts.GetAllTheUrlsOfWiproJobs.allUrls()'><b>allUrls</b><br>Test class: com.latestAssignments.testscrripts.GetAllTheUrlsOfWiproJobs<br/>
+<a href="#Output-1053164295" onClick='toggleBox("Output-1053164295", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1053164295" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1053164295">
+Test started<br/>
+Wipro Careers | Discover a World of Opportunities<br/>
+Apply Now<br/>
+Opportunities<br/>
+India<br/>
+Job Opportunities in India<br/>
+Filters List<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+133 Wipro Job Vacancies In Bangalore<br/>
+Wipro Fresher Jobs In Bangalore - Bengaluru<br/>
+327 Wipro Jobs and Vacancies in Bengaluru, Karnataka<br/>
+wipro jobs in whitefield, bengaluru, karnataka<br/>
+2000+ Wipro jobs in India (85 new)<br/>
+Urgent: Wipro freshers Jobs in Bangalore - July 2023 - Jooble<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>20</td>
+<td>com.latestAssignments.testscrripts.GetAllTheUrlsOfWiproJobs@7d20d0b</td></tr>
+<tr>
+<td title='com.Lokesh.Sauce.Testscripts.SauceExecution1.executionSauceTest()'><b>executionSauceTest</b><br>Test class: com.Lokesh.Sauce.Testscripts.SauceExecution1<br/>
+<a href="#Output-1031674109" onClick='toggleBox("Output-1031674109", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1031674109" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1031674109">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Lokesh.Sauce.Testscripts.SauceExecution1@24313fcc</td></tr>
+<tr>
+<td title='com.bharath.Assignments.testscript.DuplicatesOfListBox.duplicatesTest()'><b>duplicatesTest</b><br>Test class: com.bharath.Assignments.testscript.DuplicatesOfListBox<br/>
+<a href="#Output-1740002674" onClick='toggleBox("Output-1740002674", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1740002674" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1740002674">
+Test started<br/>
+Monday<br/>
+Monday<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>9</td>
+<td>com.bharath.Assignments.testscript.DuplicatesOfListBox@65e98b1c</td></tr>
+<tr>
+<td title='com.latestAssignments.testscrripts.ScrollToLastOfWebPage.scroll()'><b>scroll</b><br>Test class: com.latestAssignments.testscrripts.ScrollToLastOfWebPage<br/>
+<a href="#Output-142558265" onClick='toggleBox("Output-142558265", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-142558265" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-142558265">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>com.latestAssignments.testscrripts.ScrollToLastOfWebPage@4c178a76</td></tr>
+<tr>
+<td title='myownprograms.VerifyingCart.addToCartVerify()'><b>addToCartVerify</b><br>Test class: myownprograms.VerifyingCart<br/>
+<a href="#Output-1916017779" onClick='toggleBox("Output-1916017779", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1916017779" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1916017779">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>30</td>
+<td>myownprograms.VerifyingCart@544fa968</td></tr>
+<tr>
+<td title='com.latestAssignments.testscrripts.DropDownSelectAllOptions.selectAllOptions()'><b>selectAllOptions</b><br>Test class: com.latestAssignments.testscrripts.DropDownSelectAllOptions<br/>
+<a href="#Output-222642317" onClick='toggleBox("Output-222642317", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-222642317" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-222642317">
+Test started<br/>
+Jan<br/>
+Feb<br/>
+Mar<br/>
+Apr<br/>
+May<br/>
+Jun<br/>
+Jul<br/>
+Aug<br/>
+Sep<br/>
+Oct<br/>
+Nov<br/>
+Dec<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>7</td>
+<td>com.latestAssignments.testscrripts.DropDownSelectAllOptions@24aed80c</td></tr>
+<tr>
+<td title='com.Lokesh.Own.Testscripts.UsageOfDataProviderAnnotation.login()'><b>login</b><br>Test class: com.Lokesh.Own.Testscripts.UsageOfDataProviderAnnotation<br>Parameters: Lokesh, 123<br/>
+<a href="#Output-1908043955" onClick='toggleBox("Output-1908043955", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1908043955" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1908043955">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Lokesh.Own.Testscripts.UsageOfDataProviderAnnotation@510f3d34</td></tr>
+<tr>
+<td title='com.TakesScreenshot.generic.ParticularWebElementScreenShot.screenShotTest()'><b>screenShotTest</b><br>Test class: com.TakesScreenshot.generic.ParticularWebElementScreenShot<br/>
+<a href="#Output-1315315564" onClick='toggleBox("Output-1315315564", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1315315564" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1315315564">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>86</td>
+<td>com.TakesScreenshot.generic.ParticularWebElementScreenShot@6ad82709</td></tr>
+<tr>
+<td title='com.TakesScreenshot.generic.ZomatoImagesScreenShots.screenShot()'><b>screenShot</b><br>Test class: com.TakesScreenshot.generic.ZomatoImagesScreenShots<br/>
+<a href="#Output-361714178" onClick='toggleBox("Output-361714178", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-361714178" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-361714178">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>38</td>
+<td>com.TakesScreenshot.generic.ZomatoImagesScreenShots@247bddad</td></tr>
+<tr>
+<td title='com.Lokesh.Actions.testscripts.UsageOfVtigerDoubleClick.doubleClickTest()'><b>doubleClickTest</b><br>Test class: com.Lokesh.Actions.testscripts.UsageOfVtigerDoubleClick<br/>
+<a href="#Output-414811113" onClick='toggleBox("Output-414811113", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-414811113" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-414811113">
+Test started<br/>
+Pass: Login page is displayed and it ia verified<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>27</td>
+<td>com.Lokesh.Actions.testscripts.UsageOfVtigerDoubleClick@61322f9d</td></tr>
+<tr>
+<td title='com.Lokesh.TestNG.Testscripts.GetAllOptionsOfListBox.allOptions()'><b>allOptions</b><br>Test class: com.Lokesh.TestNG.Testscripts.GetAllOptionsOfListBox<br/>
+<a href="#Output-1986410742" onClick='toggleBox("Output-1986410742", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1986410742" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1986410742">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>com.Lokesh.TestNG.Testscripts.GetAllOptionsOfListBox@5e5d171f</td></tr>
+<tr>
+<td title='com.Lokesh.Own.Testscripts.UsageOfDataProviderAnnotation.login()'><b>login</b><br>Test class: com.Lokesh.Own.Testscripts.UsageOfDataProviderAnnotation<br>Parameters: susheela, 789<br/>
+<a href="#Output-427808555" onClick='toggleBox("Output-427808555", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-427808555" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-427808555">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Lokesh.Own.Testscripts.UsageOfDataProviderAnnotation@510f3d34</td></tr>
+<tr>
+<td title='com.bharath.Assignments.testscript.SortedOrderListBox.SortingTest()'><b>SortingTest</b><br>Test class: com.bharath.Assignments.testscript.SortedOrderListBox<br/>
+<a href="#Output-1164120820" onClick='toggleBox("Output-1164120820", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1164120820" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1164120820">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>com.bharath.Assignments.testscript.SortedOrderListBox@7dcf94f8</td></tr>
+<tr>
+<td title='com.Actitme.testscripts.ActitimeTestClass.createCustomerTest()'><b>createCustomerTest</b><br>Test class: com.Actitme.testscripts.ActitimeTestClass<br/>
+<a href="#Output-706363713" onClick='toggleBox("Output-706363713", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-706363713" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-706363713">
+Test started<br/>
+Pass: Customer has Created Successfully and it is verified<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>26</td>
+<td>com.Actitme.testscripts.ActitimeTestClass@1ff4931d</td></tr>
+<tr>
+<td title='com.bharath.Assignments.testscript.GetallLinksFromFlipkart.allLinks()'><b>allLinks</b><br>Test class: com.bharath.Assignments.testscript.GetallLinksFromFlipkart<br/>
+<a href="#Output-301892256" onClick='toggleBox("Output-301892256", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-301892256" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-301892256">
+Test started<br/>
+<br/>
+Explore Plus<br/>
+Login<br/>
+Become a Seller<br/>
+Cart<br/>
+Grocery<br/>
+Mobiles<br/>
+Fashion<br/>
+Electronics<br/>
+Home & Furniture<br/>
+Appliances<br/>
+Travel<br/>
+Top Offers<br/>
+Beauty, Toys & More
+Beauty & Personal Care
+Men's Grooming
+Food & Drinks
+Nutrition & Health Care
+Baby Care
+Toys & School Supplies
+Sports & Fitness
+Books
+Music
+Stationery & Office Supplies
+Auto Accessories
+Safety & Hygiene Essentials
+MORE IN BEAUTY & PERSONAL CARE
+View All
+Bath & Oral Care
+Personal Hygiene
+Eye Makeup
+Face Makeup
+Lip Makeup
+Hair Care
+Bath Essentials
+Women's Personal Hygiene
+Body & Skin Care
+Luxury
+Top Brand Deals<br/>
+Beauty & Personal Care<br/>
+Men's Grooming<br/>
+Food & Drinks<br/>
+Nutrition & Health Care<br/>
+Baby Care<br/>
+Toys & School Supplies<br/>
+Sports & Fitness<br/>
+Books<br/>
+Music<br/>
+Stationery & Office Supplies<br/>
+Auto Accessories<br/>
+Safety & Hygiene Essentials<br/>
+View All<br/>
+Bath & Oral Care<br/>
+Personal Hygiene<br/>
+Eye Makeup<br/>
+Face Makeup<br/>
+Lip Makeup<br/>
+Hair Care<br/>
+Bath Essentials<br/>
+Women's Personal Hygiene<br/>
+Body & Skin Care<br/>
+Luxury<br/>
+Top Brand Deals<br/>
+Two Wheelers<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+VIEW ALL<br/>
+Printers
+From ₹3999
+HP<br/>
+Top Mirrorless Cameras
+Shop Now!
+Canon, Sony, Fujifilm...<br/>
+Premium PowerBanks
+Shop Now
+Mi, realme & more<br/>
+Best of Trimmers
+From ₹399
+realme, Mi, Philips & more<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+VIEW ALL<br/>
+Tricycles & Rideons
+Up to 70% Off
+Figurines, Battle Toys & more<br/>
+Gym Essentials
+From ₹139
+Shop Now<br/>
+Geared Cycles
+From ₹ 3999
+Leader, Cradiac & more<br/>
+Rider Helmets
+From 699
+Vega, Steelbird, HRX and More<br/>
+Soft Toys
+Upto 70% Off
+Stuffed Toys, Plush Toys & more<br/>
+<br/>
+<br/>
+<br/>
+VIEW ALL<br/>
+Sandals & Floaters
+Min. 70% Off<br/>
+Casual Shoes
+Min. 70% Off<br/>
+Wrist Watches
+Min. 90% Off<br/>
+Women's Sarees
+Min. 50% Off<br/>
+Slippers & Flip Flops
+Min. 70% Off<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Brand Directory<br/>
+One Pieces<br/>
+Fashion EOSS Sale<br/>
+Trend Stop<br/>
+Flipkart Axis Bank Super Elite Credit card<br/>
+5G Mobile Phones<br/>
+Primebook Laptops<br/>
+Moto Edge 40<br/>
+Bounce Infinity E1<br/>
+Buy Laptop on EMI<br/>
+Infinix Zero Book Ultra<br/>
+OPPO Reno8 5G<br/>
+OPPO Reno8 Pro 5G<br/>
+Fresh Flower Bouquet<br/>
+Electric Cycles<br/>
+Badminton<br/>
+iphone 14<br/>
+Bouquet<br/>
+Laptop Repair Services<br/>
+AC Cleaning Services<br/>
+Oneplus Monitors<br/>
+Grievance Redressal<br/>
+Mobile Repair Services<br/>
+Sell Old Mobile Phones<br/>
+Premium Laptops<br/>
+Electronics Store<br/>
+Phone cover<br/>
+Infinix INBook Y1 Plus<br/>
+Okaya Electric Vehicles<br/>
+bgauss electric scooter<br/>
+OPPO Reno7 Pro 5G<br/>
+iPhone 13<br/>
+iPhone 13 Pro<br/>
+iPhone 13 Pro Max<br/>
+iPhone 13 Mini<br/>
+Google Pixel 6a covers<br/>
+Flipkart Quick<br/>
+Ampere Magnus<br/>
+Flipkart Help Centre<br/>
+Online Boat Store<br/>
+Covers from Rs 99<br/>
+Flipkart Track Orders<br/>
+Flipkart Manage Orders<br/>
+Flipkart Return Orders<br/>
+Flipkart Gift Cards Store<br/>
+Flipkart Axis Bank Credit Card<br/>
+Flipkart Pay Later<br/>
+iPhone 12 64GB<br/>
+iPhone 12 Pro 512GB<br/>
+iPhone 12 128GB<br/>
+Vivo Y91i<br/>
+Vivo Y11<br/>
+Vivo Y15<br/>
+SAMSUNG Galaxy S21 FE 5G<br/>
+Infinix HOT 30i<br/>
+Realme 10 Pro 5G<br/>
+MOTOROLA G32<br/>
+MOTOROLA G62 5G<br/>
+Nothing Phone<br/>
+REDMI Note 12 Pro 5G<br/>
+Infinix SMART 7<br/>
+Vivo Y50<br/>
+Vivo Y12<br/>
+Reno2 F<br/>
+Oppo A12<br/>
+Nothing Phone 5g<br/>
+Google Pixel 5g Phone<br/>
+Motorola 5g Phone<br/>
+Realme 5g Smartphone<br/>
+Apple 5g Phone<br/>
+Iqoo 5g Phones<br/>
+Oneplus 5g Phones<br/>
+Vivo 5g Phones<br/>
+Oppo 5g Smart Phones<br/>
+Oppo F15<br/>
+Oppo A31<br/>
+Samsung A71<br/>
+Samsung A51<br/>
+Samsung A31<br/>
+Realme X2<br/>
+iPhone 11<br/>
+iPhone 11 Pro<br/>
+Mobile Cover<br/>
+Mobile Offers<br/>
+iphone x<br/>
+4G Mobile<br/>
+Nokia Mobile<br/>
+Samsung Mobile<br/>
+iphone<br/>
+Oppo Mobile<br/>
+Vivo Mobile<br/>
+GoPro Action Camera<br/>
+Nikon Camera<br/>
+Canon Camera<br/>
+Sony Camera<br/>
+Canon DSLR<br/>
+Nikon DSLR<br/>
+Asus ROG Ally<br/>
+MacBook Pro M2<br/>
+Premium Laptop<br/>
+ASUS ROG Strix SCAR 16 (2023) Core i9 13th Gen<br/>
+ASUS ROG Zephyrus M16 (2023) Core i9 13th Gen<br/>
+ASUS Zenbook 14 OLED (2022)<br/>
+Realme Book Prime Core i5 11th Gen<br/>
+Microsoft Surface Go Pentium 128GB<br/>
+Branded Laptops<br/>
+Apple Laptops<br/>
+Acer Laptops<br/>
+Lenovo Laptops<br/>
+Dell Laptops<br/>
+Asus Laptops<br/>
+HP Laptops<br/>
+Gaming Laptops<br/>
+2 in 1 Laptops<br/>
+Laptops<br/>
+Dell latest laptops 2022<br/>
+HP latest laptops 2022<br/>
+Infinix INBook Y1 Plus<br/>
+SAMSUNG Galaxy Book3<br/>
+12th Gen Intel Core Laptops<br/>
+Nokia TV<br/>
+Panasonic TV<br/>
+Thomson TV<br/>
+Mi X Pro<br/>
+Realme TV<br/>
+Motorola TV<br/>
+OnePlus TVs<br/>
+LG TV<br/>
+TV<br/>
+Sony TV<br/>
+Samsung TV<br/>
+Android Television<br/>
+Iffalcon Tv<br/>
+Mi TV<br/>
+TV & Appliances End of Season Sale<br/>
+Television<br/>
+Washing Machines<br/>
+Refrigerators<br/>
+Air Conditioners<br/>
+Electric Cookers<br/>
+Electric Jug(Heater) / Travel Kettles<br/>
+Induction Cooktops<br/>
+Inverters / stabilizer<br/>
+Irons / Iron Box<br/>
+Mixer Grinder Juicer<br/>
+Wet Grinders<br/>
+Chimneys<br/>
+Microwave Ovens<br/>
+Vacuum Cleaners<br/>
+Water Purifier<br/>
+Fan<br/>
+MarQ Customer Care<br/>
+Green bridal lehenga<br/>
+Bridal Blouse<br/>
+Half saree blouse designs<br/>
+Designer blouses<br/>
+Blouse designs<br/>
+Men Shirts<br/>
+Plain suit with heavy dupatta<br/>
+Half saree for kids<br/>
+Cotton saree blouse designs<br/>
+Kurta Pajama<br/>
+Men T-Shirts<br/>
+New blouse design<br/>
+Jeans<br/>
+Bridal designer blouse<br/>
+Simple aari work blouse designs<br/>
+Bridal banarasi sarees<br/>
+Saree<br/>
+High waist panties<br/>
+Hooded jacket women<br/>
+Dresses<br/>
+Hoodie tshirts for men<br/>
+One pieces<br/>
+Hip hop cap for men<br/>
+Groom wedding sherwani<br/>
+Designer Salwar Suits<br/>
+Bra<br/>
+Aari work blouse hand designs<br/>
+Cotton simple blouse designs<br/>
+Banarasi saree blouse designs<br/>
+Designer Kurtis<br/>
+Stylish blouse astin design<br/>
+Track Pant<br/>
+Blouse neck designs<br/>
+Men Kurtas<br/>
+V neck blouse designs<br/>
+Gym Wear<br/>
+Party Dresses<br/>
+Palazzo Suits<br/>
+Boys Clothing<br/>
+Gloves<br/>
+Nighty<br/>
+Maxi Dresses<br/>
+Anarkali<br/>
+Gowns<br/>
+Culottes<br/>
+Salwar Suits<br/>
+Kurtis<br/>
+Designer Sarees<br/>
+Leggings<br/>
+Shorts<br/>
+Georgette Sarees<br/>
+Ethnic Wear<br/>
+Briefs & Trunks<br/>
+Nike Watches<br/>
+Women henley<br/>
+uppada pattu sarees<br/>
+Blouse back design<br/>
+Leopard dresses<br/>
+Sleeveless shrugs<br/>
+Latest blouse designs<br/>
+Simple Blouse designs<br/>
+Shoes<br/>
+Adidas Shoes<br/>
+Reebok Shoes<br/>
+Nike Shoes<br/>
+Puma Shoes<br/>
+Boots<br/>
+Bata Shoes<br/>
+Woodland Shoes<br/>
+Skechers Shoes<br/>
+Sneakers<br/>
+Womens Boots<br/>
+Sports Shoes<br/>
+Loafers<br/>
+Sandals<br/>
+Lotto Sports Shoes<br/>
+Casual Shoes<br/>
+Womens Skechers Shoes<br/>
+Asics Sports Shoes<br/>
+Formal Shoes<br/>
+School Shoes<br/>
+PhonePe Grocery Voucher<br/>
+Hand Wash<br/>
+Soap<br/>
+Cashew Nuts<br/>
+Sunflower Oil<br/>
+Eggs<br/>
+Toilet Cleaner<br/>
+Harpic Toilet Cleaner<br/>
+Dettol Soap<br/>
+Mustard Oil<br/>
+Biscuits<br/>
+Cheese<br/>
+Patanjali Atta<br/>
+Fortune Oil<br/>
+Aashirvaad Atta<br/>
+Tea<br/>
+Fire-Boltt Ninja Calling Pro Bluetooth Calling Smartwatch 1.69 inch HD Display Smartwatch<br/>
+Best Gas Geyser<br/>
+Kitchen Geyser<br/>
+Nutri Blenders<br/>
+Portable Air Cooler<br/>
+Best Air Cooler<br/>
+Bags<br/>
+Hitachi Refrigerator 3 Door<br/>
+Books<br/>
+Toys<br/>
+Candles<br/>
+Helmets<br/>
+Wall Clocks<br/>
+Baby Food<br/>
+Chocolates<br/>
+Cycles<br/>
+Calculators<br/>
+Lipsticks<br/>
+Mask<br/>
+Vertiv UPS<br/>
+Fastrack Watches<br/>
+Wallets<br/>
+Earrings<br/>
+Gold Coins<br/>
+Realme Pad Mini<br/>
+Handbags<br/>
+conekt SW2 Smartwatch<br/>
+Mivi DuoPods a350<br/>
+Speaker Cleaner<br/>
+Furniture<br/>
+Sofas<br/>
+Beds<br/>
+Dining sets<br/>
+Wardrobes<br/>
+Mattresses<br/>
+TV Units<br/>
+Tables<br/>
+Chairs<br/>
+Shelves<br/>
+Bean Bags<br/>
+Office Chairs<br/>
+Computer Table<br/>
+Office Tables<br/>
+Red Sofa<br/>
+Wakefit Beds<br/>
+White Sofa<br/>
+Wakefit Mattress<br/>
+Green Sofa<br/>
+Black Sofa<br/>
+Brown Sofa<br/>
+Whey Protein<br/>
+Homeopathy<br/>
+Cricket<br/>
+Cycles<br/>
+Footballs<br/>
+Treadmills<br/>
+Christmas Gifts<br/>
+Fitness Accessories<br/>
+Online Guitar<br/>
+Books Store<br/>
+Musical Instrument Store<br/>
+Dabur Chyawanprash<br/>
+Baidyanath Chyawanprash<br/>
+Energy Drinks<br/>
+Toys<br/>
+Milk Drink Mixes<br/>
+Rakhi<br/>
+Chyawanprash<br/>
+Indian Flag<br/>
+Protein Supplements<br/>
+Purchases.oni@flipkart.com<br/>
+Contact Us<br/>
+About Us<br/>
+Careers<br/>
+Flipkart Stories<br/>
+Press<br/>
+Flipkart Wholesale<br/>
+Corporate Information<br/>
+Payments<br/>
+Shipping<br/>
+Cancellation & Returns<br/>
+FAQ<br/>
+Report Infringement<br/>
+Cancellation & Returns<br/>
+Terms Of Use<br/>
+Security<br/>
+Privacy<br/>
+Sitemap<br/>
+Grievance Redressal<br/>
+EPR Compliance<br/>
+Facebook<br/>
+Twitter<br/>
+YouTube<br/>
+044-45614700<br/>
+Become a Seller<br/>
+Advertise<br/>
+Gift Cards<br/>
+Help Center<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>39</td>
+<td>com.bharath.Assignments.testscript.GetallLinksFromFlipkart@8297b3a</td></tr>
+<tr>
+<td title='com.bharath.Assignments.testscript.AutoSuggestions.suggestions()'><b>suggestions</b><br>Test class: com.bharath.Assignments.testscript.AutoSuggestions<br/>
+<a href="#Output-1271291618" onClick='toggleBox("Output-1271291618", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1271291618" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1271291618">
+Test started<br/>
+selenium<br/>
+selenium interview questions<br/>
+selenium download<br/>
+selenium tutorial<br/>
+selenium webdriver<br/>
+selenium rich foods<br/>
+selenium ide for chrome<br/>
+selenium dev<br/>
+selenium testing<br/>
+selenium grid<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>com.bharath.Assignments.testscript.AutoSuggestions@279fedbd</td></tr>
+<tr>
+<td title='com.Actitme.testscripts.ActitimeTestClass.createProjectTest()'><b>createProjectTest</b><br>Test class: com.Actitme.testscripts.ActitimeTestClass<br/>
+<a href="#Output-1153457509" onClick='toggleBox("Output-1153457509", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1153457509" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1153457509">
+Test started<br/>
+Pass: Project has created successfully and it is verified.<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>com.Actitme.testscripts.ActitimeTestClass@1ff4931d</td></tr>
+<tr>
+<td title='com.TakesScreenshot.generic.UsageOfTakesScreenShotOfAllWebElements.screenShots()'><b>screenShots</b><br>Test class: com.TakesScreenshot.generic.UsageOfTakesScreenShotOfAllWebElements<br/>
+<a href="#Output-841417678" onClick='toggleBox("Output-841417678", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-841417678" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-841417678">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>93</td>
+<td>com.TakesScreenshot.generic.UsageOfTakesScreenShotOfAllWebElements@77f1baf5</td></tr>
+<tr>
+<td title='com.Actitme.testscripts.ActitimeTestClass.createTaskTest()'><b>createTaskTest</b><br>Test class: com.Actitme.testscripts.ActitimeTestClass<br/>
+<a href="#Output-1925069202" onClick='toggleBox("Output-1925069202", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1925069202" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1925069202">
+Test started<br/>
+Pass: Task has created successfully and it is verified.<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>com.Actitme.testscripts.ActitimeTestClass@1ff4931d</td></tr>
+<tr>
+<td title='com.latestAssignments.testscrripts.Bbc5LatestBusinessNews.news()'><b>news</b><br>Test class: com.latestAssignments.testscrripts.Bbc5LatestBusinessNews<br/>
+<a href="#Output-1966164801" onClick='toggleBox("Output-1966164801", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1966164801" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1966164801">
+Test started<br/>
+BBC latest Business News:<br/>
+1. Spring surge in US economy beats expectations<br/>
+2. Coutts Bank boss quits over Farage account row<br/>
+3. Wizz Air passengers may get refunds as claims reopened<br/>
+4. US raises interest rates to highest in 22 years<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>com.latestAssignments.testscrripts.Bbc5LatestBusinessNews@b2c9a9c</td></tr>
+<tr>
+<td title='com.Lokesh.TestNG.Testscripts.GoogleTitleUsingIfElse.title()'><b>title</b><br>Test class: com.Lokesh.TestNG.Testscripts.GoogleTitleUsingIfElse<br/>
+<a href="#Output-1516398611" onClick='toggleBox("Output-1516398611", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1516398611" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1516398611">
+Test started<br/>
+pass<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.Lokesh.TestNG.Testscripts.GoogleTitleUsingIfElse@45c7e403</td></tr>
+<tr>
+<td title='datadriventesting.LoginAndLogoutActitime.LoginLogoutActitimeTest()'><b>LoginLogoutActitimeTest</b><br>Test class: datadriventesting.LoginAndLogoutActitime<br/>
+<a href="#Output-611560386" onClick='toggleBox("Output-611560386", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-611560386" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-611560386">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>56</td>
+<td>datadriventesting.LoginAndLogoutActitime@7817fd62</td></tr>
+<tr>
+<td title='com.bharath.Assignments.testscript.GetAllLinksOfGoogle.allLinks()'><b>allLinks</b><br>Test class: com.bharath.Assignments.testscript.GetAllLinksOfGoogle<br/>
+<a href="#Output-281766591" onClick='toggleBox("Output-281766591", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-281766591" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-281766591">
+Test started<br/>
+Gmail<br/>
+Images<br/>
+<br/>
+Sign in<br/>
+<br/>
+हिन्दी<br/>
+বাংলা<br/>
+తెలుగు<br/>
+मराठी<br/>
+தமிழ்<br/>
+ગુજરાતી<br/>
+ಕನ್ನಡ<br/>
+മലയാളം<br/>
+ਪੰਜਾਬੀ<br/>
+About<br/>
+Advertising<br/>
+Business<br/>
+How Search works<br/>
+Privacy<br/>
+Terms<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>com.bharath.Assignments.testscript.GetAllLinksOfGoogle@3a52dba3</td></tr>
+<tr>
+<td title='datadriventesting.AravindhProgram.testOne()'><b>testOne</b><br>Test class: datadriventesting.AravindhProgram<br/>
+<a href="#Output-24925641" onClick='toggleBox("Output-24925641", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-24925641" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-24925641">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>datadriventesting.AravindhProgram@2362f559</td></tr>
+<tr>
+<td title='com.bharath.Assignments.testscript.AutoSuggestionsOnFlipkart.allSuggetions()'><b>allSuggetions</b><br>Test class: com.bharath.Assignments.testscript.AutoSuggestionsOnFlipkart<br/>
+<a href="#Output-482546996" onClick='toggleBox("Output-482546996", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-482546996" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-482546996">
+Test started<br/>
+iphone 14 pro max<br/>
+iphone 14 pro max<br/>
+iphone 14 pro max<br/>
+iphone 14 pro max<br/>
+iphone 14 pro max<br/>
+iphone 14 pro max<br/>
+iphone 14 pro max<br/>
+iphone 14 pro max<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>com.bharath.Assignments.testscript.AutoSuggestionsOnFlipkart@3eb25e1a</td></tr>
+<tr>
+<td title='com.bharath.Assignments.testscript.AutoSuggetionsOnAmezon.allSuggestions()'><b>allSuggestions</b><br>Test class: com.bharath.Assignments.testscript.AutoSuggetionsOnAmezon<br/>
+<a href="#Output-1845597112" onClick='toggleBox("Output-1845597112", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1845597112" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1845597112">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>18</td>
+<td>com.bharath.Assignments.testscript.AutoSuggetionsOnAmezon@7770f470</td></tr>
+<tr>
+<td title='com.Lokesh.Own.Testscripts.UsageOfDataProviderAnnotation.login()'><b>login</b><br>Test class: com.Lokesh.Own.Testscripts.UsageOfDataProviderAnnotation<br>Parameters: Karthik, 456<br/>
+<a href="#Output-1567105685" onClick='toggleBox("Output-1567105685", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1567105685" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1567105685">
+Test started<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.Lokesh.Own.Testscripts.UsageOfDataProviderAnnotation@510f3d34</td></tr>
+<tr>
+<td title='com.latestAssignments.testscrripts.AllAutoSuggesionsQspiders.suggesions()'><b>suggesions</b><br>Test class: com.latestAssignments.testscrripts.AllAutoSuggesionsQspiders<br/>
+<a href="#Output-596642541" onClick='toggleBox("Output-596642541", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-596642541" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-596642541">
+Test started<br/>
+QSpiders<br/>
+QSpiders BTM - Software Testing Training & Placement Institute<br/>
+QSpiders Rajajinagar<br/>
+QSpiders Basavanagudi<br/>
+QSpiders Hebbal<br/>
+Software Training Institute · RISANDRO centre, QSpiders, 5th Block, 3rd Floor, No.1815, Outer Ring Rd, 1st Stage, HBR Layout, Bengaluru, Karnataka<br/>
+Test success<br/>
+</div>
+</td>
+<td></td>
+<td>36</td>
+<td>com.latestAssignments.testscrripts.AllAutoSuggesionsQspiders@fa4c865</td></tr>
+</table><p>
+</body>
+</html>

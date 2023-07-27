@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Suite">
+  <test thread-count="2"  name="Test">
+    <classes>
+      <class name="datadriventesting.FbSignup"/>
+      <class name="com.bharath.Assignments.testscript.SortedOrderListBox"/>
+      <class name="com.latestAssignments.testscrripts.ClearTrip"/>
+      <class name="com.bharath.Assignments.testscript.AutoSuggestionsOnFlipkart"/>
+      <class name="com.latestAssignments.testscrripts.DropDownSelectAllOptions"/>
+      <class name="com.bharath.Assignments.testscript.GetAllLinksOfGoogle"/>
+      <class name="com.bharath.Assignments.testscript.OrderFoodInZomato"/>
+      <class name="com.latestAssignments.testscrripts.flipkartIphoneTitlesPrint"/>
+      <class name="com.bharath.Assignments.testscript.AutoSuggestions"/>
+      <class name="com.bharath.Assignments.testscript.UniqueValuesOfListBox"/>
+      <class name="com.Lokesh.TestNG.Testscripts.GoogleTitleUsingIfElse"/>
+      <class name="com.Actitme.testscripts.ActitimeTestClass"/>
+      <class name="com.bharath.Assignments.testscript.DuplicatesOfListBox"/>
+      <class name="com.Lokesh.Actions.testscripts.UsageOfVtigerDoubleClick"/>
+      <class name="com.TakesScreenshot.generic.ParticularWebElementScreenShot"/>
+      <class name="com.Lokesh.Own.Testscripts.UsageOfDataProviderAnnotation"/>
+      <class name="datadriventesting.LoginAndLogoutActitime"/>
+      <class name="com.bharath.Assignments.testscript.GetallLinksFromFlipkart"/>
+      <class name="datadriventesting.AravindhProgram"/>
+      <class name="com.latestAssignments.testscrripts.Bbc5LatestBusinessNews"/>
+      <class name="com.latestAssignments.testscrripts.ScrollToLastOfWebPage"/>
+      <class name="com.latestAssignments.testscrripts.AllAutoSuggesionsQspiders"/>
+      <class name="com.Lokesh.TestNG.Testscripts.UsageOfTakesScreenShot"/>
+      <class name="myownprograms.VerifyingCart"/>
+      <class name="com.TakesScreenshot.generic.ZomatoImagesScreenShots"/>
+      <class name="saucePropertyData.SaucePropertiesTest"/>
+      <class name="com.bharath.Assignments.testscript.AutoSuggetionsOnAmezon"/>
+      <class name="com.Lokesh.TestNG.Testscripts.GetAllOptionsOfListBox"/>
+      <class name="com.Lokesh.Sauce.Testscripts.SauceExecution1"/>
+      <class name="com.latestAssignments.testscrripts.GetAllTheUrlsOfWiproJobs"/>
+      <class name="com.TakesScreenshot.generic.UsageOfTakesScreenShotOfAllWebElements"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
